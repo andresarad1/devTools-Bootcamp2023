@@ -17,3 +17,24 @@ En este caso, se muestra una X con dimensiones 5x5.
 Tu objetivo es implementar la función drawX() de manera que genere correctamente la X con asteriscos de acuerdo al tamaño especificado.
 
 */
+function drawX(tamano) {
+    // Este fragemnto código es para que la X solo tenga un punto central, exigiendo numeros impares
+    // if (tamano % 2 === 0) {
+    //   console.log("El tamaño debe ser un número impar.");
+    //   return;
+    // }
+  
+    for (let i = 0; i < tamano; i++) {
+      let line = "";
+      for (let j = 0; j < tamano; j++) {
+        if (j === i || j === tamano - i - 1) {
+          line += "*";
+        } else {
+          line += " ";
+        }
+      }
+      console.log(line);
+    }
+  }
+
+drawX(5)

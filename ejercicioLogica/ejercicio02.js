@@ -11,12 +11,17 @@ El formato del número de teléfono devuelto debe ser correcto para completar es
 del paréntesis de cierre!
 */
 function createPhoneNumber(array) {
-    array = array.join("").toString()
-    let format = "(" + array.slice(0,3) + ") " + array.slice(3, 6) + "-" + array.slice(6, array.length)
-    console.log(format);
-    return format
+
+    if(array.length === 10 && array.every(num => num >= 0 && num <= 9)){
+        array = array.join("").toString()
+        let format = "(" + array.slice(0,3) + ") " + array.slice(3, 6) + "-" + array.slice(6, array.length)
+        console.log(format);
+        return format
+    }else{
+        console.log("tu array no es correcto, deber ser de 10 números enteros positivos entre 0 y 9")
+    }
 }
 
-let format = createPhoneNumber([5, 5, 5, 1, 3, 4, 7, 8, 9, 0])
+createPhoneNumber([5, 5, 5, 1, 3, 4, 7, 8, 9, 0])
+createPhoneNumber([3, 0, 5, 1, 2, 7, 7, 2, 4, 9]) 
 
-format = createPhoneNumber([3, 0, 5, 1, 2, 7, 7, 2, 4, 9])

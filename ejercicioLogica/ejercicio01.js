@@ -21,11 +21,16 @@ palíndromo después de 2541.
 */
 
 function next_pal(numPalindromo) {
-    for (let i = numPalindromo + 1; i < Number.MAX_VALUE; i++) {
-        if ((i.toString().split('').reverse().join('')) == i) {
-            console.log(`${i} es el siguiente palíndromo`);
-            break
-        }
+    if(numPalindromo < 0 ){
+       console.log("El numero debe ser un entero positivo");
+    }else{
+        for (let i = numPalindromo + 1; i < Number.MAX_VALUE; i++) {
+            if ((i.toString().split('').reverse().join('')) == i) {
+                    console.log(`${i} es el siguiente palíndromo`);
+                    break
+                }
+            }
+       
     }
 }
 

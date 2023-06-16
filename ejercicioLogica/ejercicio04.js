@@ -30,3 +30,20 @@ son divisibles por 3 se reemplazan por "Fizz", los números divisibles por 5 se 
 "FizzBuzz". El resultado se imprime en la consola.
 Tu objetivo es implementar la función fizzBuzz de manera que cumpla con las reglas del juego y produzca el resultado esperado
 */
+
+function fizzBuzz(n) {
+    for (let i = 1; i < n+1; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Fizz");
+        } else if (i % 5 === 0) {
+            console.log("Buzz");
+        } else {
+            console.log(i);
+        }
+        
+    }
+}
+
+fizzBuzz(15)

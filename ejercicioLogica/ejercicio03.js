@@ -29,10 +29,10 @@ function countNameRepetitions(nombres) {
       } else {
         count[nombre] = '*';
       }
-      
+      console.log(count);
     }
     
-    return console.log(count);;
+    
   }
 
 countNameRepetitions(nombres)
